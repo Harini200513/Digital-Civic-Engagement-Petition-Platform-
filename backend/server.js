@@ -15,8 +15,8 @@ app.use(securityHeaders);
 
 // CORS configuration
 const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  process.env.ADMIN_PANEL_URL,
+  process.env.FRONTEND_URL || 'http://localhost:5173',
+  process.env.ADMIN_PANEL_URL || 'http://localhost:5050',
 ];
 
 app.use(cors({
